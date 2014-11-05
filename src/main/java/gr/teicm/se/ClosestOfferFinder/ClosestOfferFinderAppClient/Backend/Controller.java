@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.se.ClosestOfferFinderApp.Backend;
+package gr.teicm.se.ClosestOfferFinder.ClosestOfferFinderAppClient.Backend;
 
 /**
  *
