@@ -24,7 +24,6 @@ import javax.ws.rs.core.MediaType;
 public class Service {
 
     //inserting stubvalue instited to database
-
     private static Map<Integer, Offer> offers = new HashMap<Integer, Offer>();
 
     static {
@@ -33,7 +32,7 @@ public class Service {
             int id = 1 + i;
             offer.setId(id);
             offer.setDescr("Κατάστημα Α -product No " + id);
-            offer.setAxia(100+4*i);
+            offer.setAxia(100 + 4 * i);
 
             offers.put(id, offer);
         }
@@ -63,4 +62,11 @@ public class Service {
         return new ArrayList<Offer>(offers.values());
     }
 
+    //This method return all offers in JSON format
+    @GET
+    @Path("/getAllOffersJSON")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getAllOffersJSON() {
+        return new ArrayList<Offer>(offers.values());
+    }
 }
