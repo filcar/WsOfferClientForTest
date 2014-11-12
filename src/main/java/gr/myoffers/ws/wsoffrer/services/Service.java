@@ -5,6 +5,7 @@
  */
 package gr.myoffers.ws.wsoffrer.services;
 
+import gr.myoffers.ws.wsoffrer.dao.OfferDao;
 import gr.myoffers.ws.wsoffrer.model.Offer;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,7 +23,7 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("service")
 public class Service {
-
+/*
     //inserting stubvalue instited to database
     private static Map<Integer, Offer> offers = new HashMap<Integer, Offer>();
 
@@ -37,13 +38,17 @@ public class Service {
             offers.put(id, offer);
         }
     }
+    */
+    
+    private OfferDao offerDao = new OfferDao();
 //This method return a single offer in XML format with the id
 
     @GET
     @Path("/getOfferByIdXML/{id}")
     @Produces(MediaType.APPLICATION_XML)
     public Offer getOfferByIdXML(@PathParam("id") int id) {
-        return offers.get(id);
+     //   return offers.get(id);
+        return offerDao.getOfferById(id);
     }
 //This method return a single offer in json format with the id
 
@@ -51,7 +56,8 @@ public class Service {
     @Path("/getOfferByIdJSON/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Offer getOfferByIdJSON(@PathParam("id") int id) {
-        return offers.get(id);
+     //   return offers.get(id);
+        return offerDao.getOfferById(id);
     }
 //This method return all offers in XML format
 
@@ -59,7 +65,8 @@ public class Service {
     @Path("/getAllOffersXML")
     @Produces(MediaType.APPLICATION_XML)
     public List<Offer> getAllOffersXML() {
-        return new ArrayList<Offer>(offers.values());
+      //  return new ArrayList<Offer>(offers.values());
+        return offerDao.getAllOffers();
     }
 
     //This method return all offers in JSON format
@@ -67,6 +74,7 @@ public class Service {
     @Path("/getAllOffersJSON")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Offer> getAllOffersJSON() {
-        return new ArrayList<Offer>(offers.values());
+       // return new ArrayList<Offer>(offers.values());
+        return offerDao.getAllOffers();
     }
 }
