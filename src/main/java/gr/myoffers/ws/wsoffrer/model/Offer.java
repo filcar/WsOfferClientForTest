@@ -5,6 +5,12 @@
  */
 package gr.myoffers.ws.wsoffrer.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -13,11 +19,19 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author fil
  */
+@Entity
+@Table(name="OFFER")
 @XmlRootElement(name = "offer")
 @XmlType(propOrder={"id","descr","axia"})
+
 public class Offer {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="ID")
     private int id;
+    @Column(name="DESCR")
     private String descr;
+    @Column(name="AXIA")
     private double axia;
 @XmlElement
     public int getId() {
