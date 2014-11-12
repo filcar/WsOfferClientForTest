@@ -11,7 +11,7 @@ ClosestOfferFinder
 ----------Επίσεις μπορεί να επιστρέψει όλες τις προσφορές (10).
            http://localhost:8080/WSoffrer/service/getAllOffersXML
            
-12/11/2014. Υλοποίηση με βάση δεδομένων: Βάση: `offers` username: fil password: 27188
+12/11/2014. Υλοποίηση με βάση δεδομένων: Βάση: `offers` username: root password: 27188
 
 
 CREATE TABLE `offer` (
