@@ -8,7 +8,7 @@ package gr.myoffers.ws.wsoffrer.services;
 import gr.myoffers.ws.wsoffrer.dao.OfferDao;
 //import gr.myoffers.ws.wsoffrer.dao.IOfferDao;
 import gr.myoffers.ws.wsoffrer.model.Offer;
-//import java.util.ArrayList;
+//import java.ua til.ArrayList;
 //import java.util.HashMap;
 import java.util.List;
 //import java.util.Map;
