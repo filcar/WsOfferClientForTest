@@ -29,9 +29,9 @@ public class Offer {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="ID")
     private int id;
-    @Column(name="DESCR")
+    @Column(name="offer_descr")
     private String descr;
-    @Column(name="AXIA")
+    @Column(name="value")
     private double axia;
 @XmlElement
     public int getId() {
