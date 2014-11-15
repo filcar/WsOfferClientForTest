@@ -12,7 +12,7 @@
     <!-- Write all execute SQL statements to stdout-->
     <!-- entity classes -->
     <property name="show_sql">true</property>
-    <mapping class="gr.myoffers.ws.wsoffrer.model.Offer"/>
+    <mapping class="gr.myoffers.ws.wsoffer.model.Offer"/>
   </session-factory>
 </hibernate-configuration>
 

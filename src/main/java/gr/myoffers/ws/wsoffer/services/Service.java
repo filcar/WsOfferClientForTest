@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.myoffers.ws.wsoffrer.services;
+package gr.myoffers.ws.wsoffer.services;
 
-import gr.myoffers.ws.wsoffrer.dao.OfferDao;
-//import gr.myoffers.ws.wsoffrer.dao.IOfferDao;
-import gr.myoffers.ws.wsoffrer.model.Offer;
+import gr.myoffers.ws.wsoffer.dao.OfferDao;
+//import gr.myoffers.ws.wsoffer.dao.IOfferDao;
+import gr.myoffers.ws.wsoffer.model.Offer;
 //import java.ua til.ArrayList;
 //import java.util.HashMap;
 import java.util.List;

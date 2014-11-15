@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.myoffers.ws.wsoffrer.model;
+package gr.myoffers.ws.wsoffer.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

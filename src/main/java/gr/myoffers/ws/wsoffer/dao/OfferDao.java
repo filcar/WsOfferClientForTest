@@ -1,7 +1,7 @@
-package gr.myoffers.ws.wsoffrer.dao;
+package gr.myoffers.ws.wsoffer.dao;
 
-import gr.myoffers.ws.wsoffrer.model.Offer;
-import gr.myoffers.ws.wsoffrer.util.HibernateUtil;
+import gr.myoffers.ws.wsoffer.model.Offer;
+import gr.myoffers.ws.wsoffer.util.HibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

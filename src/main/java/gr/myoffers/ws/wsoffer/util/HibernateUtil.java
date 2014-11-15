@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.myoffers.ws.wsoffrer.util;
+package gr.myoffers.ws.wsoffer.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

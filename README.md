@@ -6,10 +6,10 @@ ClosestOfferFinder
 
 9/11/2014. Υλοποίηση χωρίς βάση δεδομένων. Καταχώρηση stub για testing.
 ----------Με τιμή ID (1-10) επιστρέφει είτε json είτε xml ανάλογα με την μέθοδο.
-           http://localhost:8080/WSoffrer/service/getOfferByIdXML/{id}
-           http://localhost:8080/WSoffrer/service/getOfferByIdJSON/{id}
+           http://localhost:8080/WSoffer/service/getOfferByIdXML/{id}
+           http://localhost:8080/WSoffer/service/getOfferByIdJSON/{id}
 ----------Επίσεις μπορεί να επιστρέψει όλες τις προσφορές (10).
-           http://localhost:8080/WSoffrer/service/getAllOffersXML
+           http://localhost:8080/WSoffer/service/getAllOffersXML
            
 12/11/2014. Υλοποίηση με βάση δεδομένων: Βάση: `offers` username: root password: 27188
 
