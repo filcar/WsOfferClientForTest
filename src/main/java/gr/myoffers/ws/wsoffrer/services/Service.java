@@ -6,11 +6,12 @@
 package gr.myoffers.ws.wsoffrer.services;
 
 import gr.myoffers.ws.wsoffrer.dao.OfferDao;
+//import gr.myoffers.ws.wsoffrer.dao.IOfferDao;
 import gr.myoffers.ws.wsoffrer.model.Offer;
-import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.ArrayList;
+//import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+//import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -40,7 +41,8 @@ public class Service {
     }
     */
     
-    private OfferDao offerDao = new OfferDao();
+
+    private OfferDao offerDao= new OfferDao();
 //This method return a single offer in XML format with the id
 
     @GET
