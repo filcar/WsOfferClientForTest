@@ -16,13 +16,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- *
+ *1
  * @author fil
  */
 @Entity
 @Table(name="OFFER")
 @XmlRootElement(name = "offer")
-@XmlType(propOrder={"id","descr","axia"})
+@XmlType(propOrder={"id","descr","price"})
 
 public class Offer {
     @Id
@@ -31,8 +31,8 @@ public class Offer {
     private int id;
     @Column(name="offer_descr")
     private String descr;
-    @Column(name="value")
-    private double axia;
+    @Column(name="PRICE")
+    private double price;
 @XmlElement
     public int getId() {
         return id;
@@ -50,12 +50,12 @@ public class Offer {
         this.descr = descr;
     }
 @XmlElement
-    public double getAxia() {
-        return axia;
+    public double getPrice() {
+        return price;
     }
 
-    public void setAxia(double axia) {
-        this.axia = axia;
+    public void setPrice(double price) {
+        this.price = price;
     }
     
 }
