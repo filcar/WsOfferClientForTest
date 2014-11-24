@@ -16,27 +16,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- *1
+ *
  * @author fil
  */
 @Entity
-@Table(name="OFFER")
-@XmlRootElement(name = "offer")
-@XmlType(propOrder={"id","descr","price","discount"})
+@Table(name="ABOUT")
+@XmlRootElement(name = "about")
+@XmlType(propOrder={"id","value"})
 
-public class Offer {
+public class About {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="ID")
+    @Column(name="FIELD")
     private int id;
-    @Column(name="offer_descr")
-    private String descr;
-    @Column(name="PRICE")
-    private double price;
-    @Column(name="DISCOUNT")
-    private double discount;
-
-
+    @Column(name="VALUE")
+    private String value;
+    
 @XmlElement
     public int getId() {
         return id;
@@ -46,27 +41,14 @@ public class Offer {
         this.id = id;
     }
 @XmlElement
-    public String getDescr() {
-        return descr;
+    public String getValue() {
+        return value;
     }
 
-    public void setDescr(String descr) {
-        this.descr = descr;
+    public void setValue(String value) {
+        this.value = value;
     }
-@XmlElement
-    public double getPrice() {
-        return price;
-    }
+    
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
- @XmlElement
-    public double getDiscount() {
-        return discount;
-    }
-     public void setDiscount(double discount) {
-        this.discount = discount;
-    }
     
 }
