@@ -79,4 +79,22 @@ public class Service {
        // return new ArrayList<Offer>(offers.values());
         return offerDao.getAllOffers();
     }
+    
+        //This method return all offers in JSON format
+    @GET
+    @Path("/getMaxDisqOffersJSON")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getMaxDisqOffersJSON() {
+       // return new ArrayList<Offer>(offers.values());
+        return offerDao.getMaxOffers();
+    }
+            //This method return all offers in JSON format
+    @GET
+    @Path("/getVersionWsJSON")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getVersionWsJSON() {
+        String ver_WS="ver 0.1";
+       // return new ArrayList<Offer>(offers.values());
+        return ver_WS;
+    }
 }
