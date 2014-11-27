@@ -84,7 +84,7 @@ public class Service {
     @Path("/getVersionWsJSON")
     @Produces(MediaType.APPLICATION_JSON)
     public String getVersionWsJSON() {
-        String ver_WS="ver 0.1";
+        String ver_WS="ver 0.2";
         return ver_WS;
     }
 }
