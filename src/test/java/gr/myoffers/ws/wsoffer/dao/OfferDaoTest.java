@@ -233,7 +233,9 @@ public class OfferDaoTest {
         List<Offer> result = instance.getOffersByStore(compId);
         assertEquals(expResult.toString(), result.toString());
     }
-
+    /**
+     * Test of GetOffersByExistedCategory method, of class OfferDao.
+     */
     @Test
     public void testGetOffersByExistedCategory() {
         System.out.println("testGetOffersByExistedCategory");
@@ -275,7 +277,7 @@ public class OfferDaoTest {
 
     @Test
     public void testGetOffersByExistedCity() {
-        /*System.out.println("testGetOffersByExistedCity");
+        System.out.println("testGetOffersByExistedCity");
         String city = "σέρρες";
         OfferDao instance = new OfferDao();
         List <Offer>expResult = new ArrayList<>();
@@ -295,7 +297,7 @@ public class OfferDaoTest {
         offer5.setOfferName("απορρυπαντικά");
         expResult.add(offer5);
         List<Offer> result = instance.getOffersByCity(city);
-        assertEquals(expResult.toString(), result.toString());*/
+        assertEquals(expResult.toString(), result.toString());
     }
 
     @Test
