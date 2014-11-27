@@ -17,38 +17,37 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  *
- * @author fil
+ * @author Giannis
  */
 @Entity
-@Table(name="ABOUT")
-@XmlRootElement(name = "about")
-@XmlType(propOrder={"id","value"})
+@Table(name="CATEGORY")
+@XmlRootElement(name = "category")
+@XmlType(propOrder={"id","catName"})
 
-public class About {
+public class Category {   
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="FIELD")
-    private int id;
-    @Column(name="VALUE")
-    private String value;
+    @Column(name="id")
+    private int categoryId;
+    @Column(name="cat_name")
+    private String catName;
     
-@XmlElement
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-@XmlElement
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
+    @XmlElement
+    public int getCatId(){
+        return categoryId;
     }
     
-
+    public void setCatId(int categoryId){
+        this.categoryId = categoryId;
+    }
     
+    @XmlElement
+    public String getCatName(){
+        return catName;
+    }
+    
+    public void setCatName(String catName){
+        this.catName = catName;
+    }
+
 }
