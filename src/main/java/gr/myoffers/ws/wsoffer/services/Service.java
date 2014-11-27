@@ -24,61 +24,52 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("service")
 public class Service {
-/*
-    //inserting stubvalue instited to database
-    private static Map<Integer, Offer> offers = new HashMap<Integer, Offer>();
-
-    static {
-        for (int i = 0; i < 10; i++) {
-            Offer offer = new Offer();
-            int id = 1 + i;
-            offer.setId(id);
-            offer.setDescr("Κατάστημα Α -product No " + id);
-            offer.setAxia(100 + 4 * i);
-
-            offers.put(id, offer);
-        }
-    }
-    */
-    
 
     private OfferDao offerDao= new OfferDao();
-//This method return a single offer in XML format with the id
-
-    @GET
-    @Path("/getOfferByIdXML/{id}")
-    @Produces(MediaType.APPLICATION_XML)
-    public Offer getOfferByIdXML(@PathParam("id") int id) {
-     //   return offers.get(id);
-        return offerDao.getOfferById(id);
-    }
-//This method return a single offer in json format with the id
 
     @GET
     @Path("/getOfferByIdJSON/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Offer getOfferByIdJSON(@PathParam("id") int id) {
-     //   return offers.get(id);
-        return offerDao.getOfferById(id);
-    }
-//This method return all offers in XML format
-
-    @GET
-    @Path("/getAllOffersXML")
-    @Produces(MediaType.APPLICATION_XML)
-    public List<Offer> getAllOffersXML() {
-      //  return new ArrayList<Offer>(offers.values());
-        return offerDao.getAllOffers();
+    public Offer getOfferByIdJSON(@PathParam("id") int offerId) {
+        return offerDao.getOfferById(offerId);
     }
 
-    //This method return all offers in JSON format
     @GET
     @Path("/getAllOffersJSON")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Offer> getAllOffersJSON() {
-       // return new ArrayList<Offer>(offers.values());
         return offerDao.getAllOffers();
     }
+      
+    @GET
+    @Path("/getOffersByDiscJSON/{disc}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getOffersByDiscJSON(@PathParam("disc") double disc){
+        return offerDao.getOffersByDisc(disc);
+    }
+    
+    @GET
+    @Path("/getOffersByStoreJSON/{compId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getOffersByStoreJSON(@PathParam("compId") int compId){
+        return offerDao.getOffersByStore(compId);
+    }
+    
+    @GET
+    @Path("/getOffersByCategoryJSON/{catId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getOffersByCategoryJSON(@PathParam("catId") int catId){
+        return offerDao.getOffersByCategory(catId);
+    }
+      
+    @GET
+    @Path("/getOffersByCityJSON/{city}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getOffersByCityJSON(@PathParam("city") String city){
+        return offerDao.getOffersByCity(city);
+    }
+    
+
     
         //This method return all offers in JSON format
     @GET
