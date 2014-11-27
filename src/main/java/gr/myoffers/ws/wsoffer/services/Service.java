@@ -94,7 +94,6 @@ public class Service {
     @Produces(MediaType.APPLICATION_JSON)
     public String getVersionWsJSON() {
         String ver_WS="ver 0.1";
-       // return new ArrayList<Offer>(offers.values());
         return ver_WS;
     }
 }
