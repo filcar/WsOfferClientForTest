@@ -178,7 +178,7 @@ public class OfferDao implements IOffer {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            String hql2 = "FROM Offer p WHERE p.discount = (SELECT max(a.discount) FROM Offer a)";
+            String hql2 = "FROM Offer p WHERE p.disc = (SELECT max(a.disc) FROM Offer a)";
             offers = session.createQuery(hql2).list();
             session.getTransaction().commit();
 
