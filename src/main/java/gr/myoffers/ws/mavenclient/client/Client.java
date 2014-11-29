@@ -8,15 +8,15 @@ package gr.myoffers.ws.mavenclient.client;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
+//import java.io.BufferedReader;
+//import java.io.ByteArrayInputStream;
 import java.net.URL;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import org.apache.http.client.ClientProtocolException;
-import org.jboss.resteasy.client.ClientRequest;
-import org.jboss.resteasy.client.ClientResponse;
+//import java.io.InputStreamReader;
+//import java.net.MalformedURLException;
+//import org.apache.http.client.ClientProtocolException;
+//import org.jboss.resteasy.client.ClientRequest;
+//import org.jboss.resteasy.client.ClientResponse;
 
 
 
