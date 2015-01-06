@@ -5,6 +5,7 @@
  */
 package gr.myoffers.ws.mavenclient.client;
 
+import java.util.Date;
 import java.util.logging.Logger;
 
 /**
@@ -20,6 +21,34 @@ public class Offer {
     private String descr;
     private double disc;
     private double price;
+    private Date startdate;
+    private Date enddate;
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    
+    
+    public Date getStartdate() {
+        return startdate;
+    }
+
+    public void setStartdate(Date startdate) {
+        this.startdate = startdate;
+    }
+
+    public Date getEnddate() {
+        return enddate;
+    }
+
+    public void setEnddate(Date enddate) {
+        this.enddate = enddate;
+    }
 
     
     public int getId() {
