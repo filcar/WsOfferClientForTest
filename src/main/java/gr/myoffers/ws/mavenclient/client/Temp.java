@@ -9,7 +9,7 @@ package gr.myoffers.ws.mavenclient.client;
  *
  * @author fil
  */
-public class Store {
+public class Temp {
     private Offer offer;
 
     public Offer getOffer() {

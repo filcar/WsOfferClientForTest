@@ -30,11 +30,12 @@ public static void main(String[] args) throws JsonParseException, JsonMappingExc
 {
             URL jsonURL = new URL("http://localhost:8080/WSoffer/service/getOfferByIdJSON/3");
             ObjectMapper mapper= new ObjectMapper();
-            Store store = null;
-            store = mapper.readValue(jsonURL, Store.class);
+            Temp store = null;
+            store = mapper.readValue(jsonURL, Temp.class);
             System.out.println(store.getOffer().getOfferName());
             System.out.println(store.getOffer().getDescr());
             System.out.println(store.getOffer().getPrice());
+            System.out.println(store.getOffer().getCategory().getCatName());
 //    Offer offer;
 //	  try {
 // 
